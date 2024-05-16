@@ -10,6 +10,6 @@ $(document).ready(function(){
 
      $('ul').on('click', 'li', function(e){ 
         e.preventDefault();
-        $(this).toogleClass('riscarTarefa')
+        $(this).toggleClass('riscarTarefa')
      })
 })
