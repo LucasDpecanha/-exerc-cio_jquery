@@ -1,15 +1,15 @@
 $(document).ready(function(){
-    $('#task-form').submit(function(e){
+    $('form').on('submit', function(e){
         e.preventDefault();
-        var taskName = $('#task-input').val();
-        if(taskName.trim() !== ''){
-            $('#task-list').append('<li>' + taskName + '</li>');
-            $('#task-input').val('');
-            $('#task-table tbody').append('<tr><td>' + taskName + '</td></tr>');
-        }
-    });
+        const nomeDaTarefa = $('input').val();
+        const novaTarefa = $(`<li>${nomeDaTarefa}</li>`)
 
-    $(document).on('click', 'li', function(){
-        $(this).toggleClass('completed');
-    });
-});
+        $(novaTarefa).appendTo('ul')
+        $('input'.val(''))
+     })
+
+     $('ul').on('click', 'li', function(e){ 
+        e.preventDefault();
+        $(this).toogleClass('riscarTarefa')
+     })
+})
